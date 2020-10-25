@@ -12,6 +12,17 @@
             
             // Jou instructies volgen hier
 
+            for (var i = 9; i > 0; i = i - 2) {
+                robotArm.grab();
+                for (var d = 0; d < i; d++) {
+                    robotArm.moveRight();
+                }
+                robotArm.drop();
+                for (var a = 0; a < i - 1; a++) {
+                    robotArm.moveLeft();
+                }
+            }
+            
             // De door jou opgegeven instructies uitvoeren
             robotArm.run();
         </script>
